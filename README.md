@@ -1,55 +1,51 @@
-# 👉 Nexus Insight – Data Visualization Dashboard
+# Nexus Insight – Data Visualization Dashboard
 
 ## 🚀 Overview
-**Nexus Insight** is a high-fidelity data visualization dashboard project designed to present raw SaaS-style business data in a clear, interactive, and aesthetically stunning way. The project focuses on data visualization, dashboard design, and basic data storytelling using a modern frontend stack.
 
-This project is created for learning, portfolio building, and professional demonstration of analytics dashboards.
+Nexus Insight is an academic data visualization dashboard project designed to present raw SaaS-style business data in a clear and interactive way.
+The project focuses on data visualization, dashboard design, and basic data storytelling using a modern frontend stack.
 
----
+This project is created for learning, portfolio building, and fresher-level demonstration of analytics dashboards.
 
 ## ✨ Key Features
 
-### **Executive KPI Dashboard**
-Displays key metrics such as Revenue, Churn Rate, Customer Count, and Growth Trends using interactive charts and glassmorphism KPI cards.
+### Executive KPI Dashboard
+Displays key metrics such as Revenue, Churn Rate, Customer Count, and Growth Trends using charts and KPI cards.
 
-### **Real-Time Data Engine**
-Features a simulated live data sync that fluctuates metrics and geographic performance dynamically to mimic a production environment.
+### Customer Retention & Churn Analysis
+Visualizes churn trends and customer health indicators to understand retention behavior.
 
-### **Customer Retention & Churn Analysis**
-Visualizes churn trends and customer health indicators to understand retention behavior through cohort heatmaps and engagement tracking.
+### Geographic Insights
+Shows region-wise performance and revenue distribution using bar and donut charts.
 
-### **Regional Performance Hub**
-Shows global market distribution and revenue contribution across territories (US, UK, India, Germany, Singapore) using bar and donut charts.
+### Interactive UI Elements
+Includes filters, tables, hover effects, and responsive components for better user experience.
 
-### **Midnight Amethyst Theme**
-A sophisticated "Midnight Amethyst" dark UI with a consistent violet and silver palette, utilizing glassmorphism effects and high-contrast accessibility.
+### Consistent Dark Theme
+Professional dark UI with meaningful color usage for positive, warning, and critical metrics.
 
-### **Responsive & Interactive Layout**
-Includes advanced filters, searchable data tables, hover animations, and a fully responsive design optimized for modern displays.
-
----
+### Responsive Layout
+Optimized for desktop and tablet screens.
 
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js + Vite
 - **Data Visualization:** Recharts
-- **Styling:** Vanilla CSS + Tailwind CSS utilities
-- **Animations:** Framer Motion
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion (basic transitions)
 - **Icons:** Lucide React
-- **Persona Integration:** DiceBear (Dynamic Avatars)
-- **Data:** Simulated Real-time SaaS datasets
-
----
+- **Data:** Mock / sample business datasets
 
 ## 📊 Data Visualization & Insights
 
-This project focuses on presenting business intelligence clearly, including:
-- **Revenue Performance:** Real-time tracking against quarterly targets.
-- **Retention Volatility:** Analysis of cohort behavior and operational churn risks.
-- **Geographic Influence:** Distribution of market health across global nodes.
-- **Customer Lifecycle:** End-to-end monitoring of individual account LTV and health status.
+This project focuses on presenting business data clearly, including:
 
----
+- Revenue trends over time
+- Customer churn comparison
+- Segment-wise performance (Enterprise vs SMB)
+- Customer lifecycle overview using tables and indicators
+
+Each chart is designed to support understanding and comparison, not prediction.
 
 ## ⚙️ Installation & Setup
 
@@ -72,10 +68,3 @@ This project focuses on presenting business intelligence clearly, including:
    ```bash
    npm run build
    ```
-
----
-
-## 📅 Project Context
-- **Project Type:** Personal / Portfolio
-- **Version:** 1.0 (Midnight Amethyst Edition)
-- **Year:** 2026 Nexus Insight
