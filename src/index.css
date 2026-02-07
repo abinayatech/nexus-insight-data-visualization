@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --font-main: 'Inter', sans-serif;
+    --font-heading: 'Outfit', sans-serif;
+
+    /* Midnight Amethyst & Silver Theme */
+    --bg-primary: #0a0118;
+    /* Deepest Violet */
+    --bg-secondary: #120329;
+    /* Deep Violet */
+    --bg-tertiary: #1c0640;
+    /* Mid Violet */
+
+    --brand-primary: #a855f7;
+    /* Violet 500 */
+    --brand-secondary: #d8b4fe;
+    /* Violet 300 */
+    --brand-accent: #f472b6;
+    /* Pink 400 */
+
+    --text-primary: #f5f3ff;
+    /* Violet 50 */
+    --text-secondary: #ddd6fe;
+    /* Violet 200 */
+    --text-muted: #7c3aed66;
+    /* Muted Violet */
+
+    --border-color: rgba(168, 85, 247, 0.1);
+    --glass-bg: rgba(18, 3, 41, 0.8);
+    --glass-border: rgba(168, 85, 247, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+}
+
+/* Premium Layout Components */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    transition: width 0.3s ease;
+}
+
+.main-content {
+    margin-left: 280px;
+    padding: 2rem 3rem;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8);
+}
+
+/* Utility Animations */
+.gradient-text {
+    background: linear-gradient(135deg, #d4af37 0%, #fde68a 50%, #b45309 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.nav-item {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.nav-item::before {
+    content: '';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 0;
+    background: var(--brand-primary);
+    border-radius: 0 4px 4px 0;
+    transition: height 0.2s ease;
+}
+
+.nav-item.active::before {
+    height: 24px;
+}
+
+/* Data Viz Table Styles */
+.data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
+}
+
+.data-table th {
+    padding: 1rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+}
+
+.data-table tr td {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.data-table tr td:first-child {
+    border-radius: 12px 0 0 12px;
+}
+
+.data-table tr td:last-child {
+    border-radius: 0 12px 12px 0;
+}
+
+.data-table tr:hover td {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+}
+
+/* Toast Animations */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast-in {
+    animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Enhanced Glass Panel */
+.glass-panel-gold {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(4, 16, 11, 0.8) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+    box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.02);
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-sans {
+    font-family: var(--font-main);
+}
+
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 80px;
+        padding: 2.5rem 0.5rem;
+        align-items: center;
+    }
+
+    .sidebar .nav-text,
+    .sidebar h1,
+    .sidebar p,
+    .sidebar .upgrade-card {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 80px;
+        padding: 2rem 1.5rem;
+    }
+}
